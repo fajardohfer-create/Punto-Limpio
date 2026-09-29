@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recicla, acumula puntos y ayuda al planeta.">
+    <title>EcoPuntos - Recicla y Gana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            ♻️ EcoPuntos
+        </div>
+        <div class="header-text">
+            Recicla hoy, cambia el mañana 🌱
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="tag">♻️ RECICLAJE INTELIGENTE</span>
+                <h1>
+                    Recicla y acumula
+                    <span>puntos</span>
+                </h1>
+                <p>
+                    Cada vez que reciclas ayudas al medioambiente
+                    y puedes acumular puntos por tus acciones.
+                </p>
+                <a href="#reciclar" class="main-button">
+                    Reciclar ahora
+                </a>
+            </div>
+            <div class="hero-icon">
+                ♻️
+            </div>
+        </section>
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <h2 id="points">0</h2>
+                <p>Puntos acumulados</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">♻️</div>
+                <h2 id="materials">0</h2>
+                <p>Reciclajes realizados</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <h2 id="level">Inicial</h2>
+                <p>Nivel actual</p>
+            </div>
+        </section>
+        <section class="recycle-section" id="reciclar">
+            <div class="section-title">
+                <span>SUMA PUNTOS</span>
+                <h2>¿Qué reciclaste?</h2>
+                <p>
+                    Selecciona el material que reciclaste para registrar
+                    tus puntos.
+                </p>
+            </div>
+            <div class="materials">
+                <button class="material-card" onclick="recycle('Botella de plástico', 10)">
+                    <div class="material-icon">🧴</div>
+                    <h3>Plástico</h3>
+                    <p>+10 puntos</p>
+                </button>
+                <button class="material-card" onclick="recycle('Lata', 15)">
+                    <div class="material-icon">🥫</div>
+                    <h3>Latas</h3>
+                    <p>+15 puntos</p>
+                </button>
+                <button class="material-card" onclick="recycle('Papel', 10)">
+                    <div class="material-icon">📄</div>
+                    <h3>Papel</h3>
+                    <p>+10 puntos</p>
+                </button>
+                <button class="material-card" onclick="recycle('Cartón', 15)">
+                    <div class="material-icon">📦</div>
+                    <h3>Cartón</h3>
+                    <p>+15 puntos</p>
+                </button>
+                <button class="material-card" onclick="recycle('Vidrio', 20)">
+                    <div class="material-icon">🍾</div>
+                    <h3>Vidrio</h3>
+                    <p>+20 puntos</p>
+                </button>
+            </div>
+        </section>
+        <section class="level-section">
+            <div class="level-card">
+                <div>
+                    <span class="small-title">TU PROGRESO</span>
+                    <h2 id="levelText">
+                        Nivel Inicial
+                    </h2>
+                    <p id="nextLevel">
+                        ¡Comienza a reciclar para subir de nivel!
+                    </p>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress" class="progress"></div>
+                    </div>
+                    <p id="progressText">
+                        0 / 100 puntos
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="how-section">
+            <div class="section-title">
+                <span>CÓMO FUNCIONA</span>
+                <h2>Reciclar es fácil</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Recicla</h3>
+                    <p>
+                        Separa correctamente tus residuos reciclables.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Registra</h3>
+                    <p>
+                        Selecciona el material que reciclaste.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Acumula</h3>
+                    <p>
+                        Obtén puntos y aumenta tu nivel.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="message-section">
+            <div class="message-card">
+                <div class="message-icon">🌎</div>
+                <h2>
+                    Cada pequeño gesto cuenta
+                </h2>
+                <p>
+                    Reciclar ayuda a reducir los residuos, ahorrar recursos
+                    naturales y cuidar nuestro planeta.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="logo">
+            ♻️ EcoPuntos
+        </div>
+        <p>
+            Recicla • Acumula • Cuida el planeta
+        </p>
+        <p class="copyright">
+            Proyecto educativo de reciclaje
+        </p>
+    </footer>
+    <div id="notification" class="notification">
+        ♻️ ¡Reciclaje registrado!
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
